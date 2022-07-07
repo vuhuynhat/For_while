@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="nhap" placeholder="Nhập vào số fibonaci can hien thi">
+    <button onclick="Fibonaci()">Hiển thị day so fibonaci</button>
+    <p id="result">Day so fibonaci la</p>
+
+    <script>
+        function Fibonaci() {
+            
+            let n1 = 0, n2 = 1, term, sum = 0;
+            var n = +document.getElementById("nhap").value;
+
+            for (let i = 1; i <= n; i++) {
+                document.write( n2 + "\n");
+                sum = sum + n2;
+                term = n1 + n2;
+                n1 = n2;
+                n2 = term;
+            }
+            
+            document.write("<br>"+"Tong cua " + n + " chu so fibonaci la " + sum);
+        }
+
+    </script>
+</body>
+
+</html>
