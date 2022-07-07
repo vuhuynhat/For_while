@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game doan so</title>
+</head>
+
+<body>
+    <button onclick="gamedoanso()">Play</button>
+    <script>
+        function gamedoanso() {
+            debugger
+            let num = prompt("Nhap vao so lon nhat trong khoang doan");
+            randomnum = Math.floor(Math.random() * num);
+            let count = 0;
+            let i = 1;
+            while (i <= 3) {
+                let playnum = prompt("Nhap vao so de doan:");
+                i++;
+
+                if (playnum == randomnum) {
+                    alert("chuc mung ban");
+                    break;
+                }
+                else ("Moi ban nhap lai");
+                count++;
+                if (count == 3) {
+                    alert("Ban da het luot choi");
+                    break;
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
